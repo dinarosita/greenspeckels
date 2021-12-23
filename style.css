@@ -1,21 +1,17 @@
 /* style.css */
 
 :root {
-    --pink:rgb(243, 196, 205);      /* border */
-    --teal: cadetblue;              /* title */
-    --blue: steelblue;              /* code */
-    --shadow: whitesmoke;           /* code background */
-    --gray: lightgrey;              /* code border */
-    --brown: sienna;                /* link */
-    --white: white;                 /* link hover */
-    --tan: rosybrown;               /* flexbox border */
-    --yellow: cornsilk;             /* flexbox background */
-    --orange: rgb(236, 144, 113);   /* strong */
-    --green: olive;                 /* warning */    
+    --border:darkseagreen;
+    --title: rgb(121, 148, 121);
+    --code: olive;
+    --shadow: whitesmoke;
+    --gray: lightgrey;
+    --link: sienna;
+    --white: white;
 }
 
 html {
-    max-width: 960px;
+    max-width: 1024px;
     margin: auto;
     box-sizing: border-box;
     font-size: 16px;
@@ -33,14 +29,13 @@ h3,
 h4,
 h5,
 h6,
-.indlex-title {
-    color:var(--teal); 
-    font-weight:bold;
+.indlex-header {
+    color:var(--title); 
 }
 
 h1,
 .indlex > div {
-    border: 8px double var(--pink);
+    border: 8px double var(--border);
     border-radius: 20px;
     padding: 3px;
 }
@@ -58,16 +53,87 @@ h6 {
 }
 
 hr {
-    border: 3px solid var(--pink);
+    border: 3px solid var(--border);
     margin: 3em 0 1em;
 }
 
-strong {
-    color: var(--orange);
+a {
+    color:var(--link);
 }
 
-a {
-    color:var(--brown);
+/* Index Flexbox */
+
+.indlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    align-content: flex-start;
+    margin: 1em 0;
+}
+
+.indlex > div {
+    flex: 1 0 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: center;
+}
+
+.indlex-header {
+    margin: 0 auto 10px;
+    min-height: 55px;
+}
+
+.plant_name {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.latin_name {
+    font-size: 0.95em;
+    font-style: italic;
+    text-align: center;
+}
+
+.indlex-picture {
+    width: 270px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    margin: 10px auto;
+}
+
+.indlex-content {
+    flex: 1;
+    margin: 10px 0;
+}
+
+.indlex-footer {
+    font-size: 0.9em;
+    color: var(--border);
+    font-style: italic;
+    margin: 20px auto 0;
+}
+
+
+
+/* Order */
+
+.featured {
+    order: 0;
+}
+
+.current {
+    order: 1;
+}
+
+.unstable {
+    order: 2;
+}
+
+.archive {
+    order: 3;
 }
 
 /* Navigation */
@@ -89,12 +155,12 @@ a {
     text-align: center;
     text-decoration: none;
     width: fit-content;
-    border: 3px solid var(--pink);
+    border: 3px solid var(--border);
 }
 
 .nav-button:link, 
 .nav-button:visited {
-    background-color: var(--pink);
+    background-color: var(--border);
     color: var(--white);
 }
 
@@ -103,204 +169,11 @@ a {
 .nav-button-rev:link,
 .nav-button-rev:visited {
     background-color: var(--white);
-    color: var(--pink);
+    color: var(--border);
 }
 
 .nav-button-rev:hover,
 .nav-button-rev:active {
-    background-color: var(--pink);
+    background-color: var(--border);
     color: var(--white);
-}
-
-/* Index Flexbox */
-
-.indlex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
-    align-content: flex-start;
-    margin: 1em 0;
-}
-
-.indlex > div {
-    flex: 1 0 270px;
-    display: flex;
-    flex-direction: column;
-    padding: 1em 1.5em;
-}
-
-.indlex-title {
-    font-size: 1.5em;
-}
-
-.indlex-content {
-    flex: 1;
-}
-
-.indlex-footer {}
-
-/* Coding Font */ 
-
-code,
-.titlecode,
-.incode {
-    font-weight: 500;
-}
-
-code,
-.incode {
-    color:var(--blue);
-}
-
-code,
-.incode,
-.titlecode,
-.codebox {
-    font-family: 'Fira Mono', monospace;   
-}
-
-code,
-.incode,
-.codebox {
-    font-size: 0.9em;
-}
-
-.titlecode {
-    display: inline-block;
-    background-color: var(--shadow);    
-    padding: 0 0.4em;
-    border: 1px var(--gray) solid;
-    border-radius: 3px;
-}
-
-code {
-    padding: 0 0.2px;
-}
-
-/* Boxes */
-
-.codebox {
-    padding: 1em;
-    border: 2px solid var(--pink);
-    border-radius: 5px;
-    margin: 1em auto;
-    max-width: 800px;
-}
-
-.img {
-    display: block;
-    margin: 40px auto;
-    height: auto;
-    width: 400px;
-}
-
-/* Text indentation */
-
-.tab {
-    margin-left: 1.5em;
-}
-
-/* Horizontal Listing */
-
-.listbar {    
-    padding: 0;
-    margin: 10px 0 20px;
-}
-
-.listbar li {
-    display: inline-block;
-    width: 8em;
-}
-
-/* Others */    
-
-.alert {
-    color: var(--green);
-}
-
-.back {
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Flexboxes used in CSS notes */
-
-.container,
-.flex-container,
-.h160-container, 
-.gap-container {
-    padding: 3px;
-    border: 3px solid var(--tan);
-    margin: 20px;
-}
-
-.flex-container,
-.h160-container,
-.gap-container {
-    display: flex;
-}
-
-.gap-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-.container div,
-.flex-container div,
-.h160-container div,
-.gap-container div {
-    padding: 5px;
-    border: 3px solid var(--teal);
-    background-color: var(--yellow);
-}
-
-.container div,
-.flex-container div {
-    margin: 5px;
-}
-
-.flex-container div {
-    flex: 1;
-}
-
-.h160-container {
-    height: 160px;
-}
-
-.h160-container div,
-.gap-container div {
-    width: 130px;
-    height: 60px;
-}
-
-/* Font used inside flexbox in CSS notes */
-
-.giant,
-.semigiant {
-    color: var(--teal);
-    font-weight: bold;
-    text-align: center;
-}
-
-.giant {
-    font-size: 2em;
-}
-
-.semigiant {
-    font-size: 1.3em;
-}
-
-/* Navigation bar, still not working properly */
-
-.links-list a {
-    background-color: var(--yellow);
-    text-decoration: none;
-    padding: 1em 2em;    
-    display: inline-block;
-}
-    
-.links-list a:hover {
-    background-color: var(--pink);
 }
