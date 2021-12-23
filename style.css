@@ -29,12 +29,13 @@ h3,
 h4,
 h5,
 h6,
-.indlex-header {
+.card-header,
+.section-title {
     color:var(--title); 
 }
 
 h1,
-.indlex > div {
+.card > div {
     border: 8px double var(--border);
     border-radius: 20px;
     padding: 3px;
@@ -45,11 +46,16 @@ h1 {
     margin-top: 5px;
 }
 
-h6 {
+.section-title {
     font-size: 1em;
+    font-weight: bold;
     padding: 1em 0 0;
     border: 0;
     margin: 0;
+}
+
+a {
+    color:var(--link);
 }
 
 hr {
@@ -57,13 +63,9 @@ hr {
     margin: 3em 0 1em;
 }
 
-a {
-    color:var(--link);
-}
+/* Card Flexbox */
 
-/* Index Flexbox */
-
-.indlex {
+.card {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
@@ -72,7 +74,7 @@ a {
     margin: 1em 0;
 }
 
-.indlex > div {
+.card > div {
     flex: 1 0 300px;
     display: flex;
     flex-direction: column;
@@ -80,7 +82,7 @@ a {
     justify-content: center;
 }
 
-.indlex-header {
+.card-header {
     margin: 0 auto 10px;
     min-height: 55px;
 }
@@ -97,26 +99,27 @@ a {
     text-align: center;
 }
 
-.indlex-picture {
+.card-picture {
     width: 270px;
     border-radius: 10px;
     border: 2px solid var(--border);
     margin: 10px auto;
 }
 
-.indlex-content {
+.card-content {
     flex: 1;
     margin: 10px 0;
 }
 
-.indlex-footer {
+.section {
+}
+
+.card-footer {
     font-size: 0.9em;
     color: var(--border);
     font-style: italic;
     margin: 20px auto 0;
 }
-
-
 
 /* Order */
 
