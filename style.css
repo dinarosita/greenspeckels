@@ -15,7 +15,7 @@ html {
     max-width: 1024px;
     margin: auto;
     box-sizing: border-box;
-    font-family: 'Barlow', 'Roboto', sans-serif; 
+    font-family: 'Barlow', sans-serif; 
     font-size: 16px;
     line-height: 1.4;
 }
@@ -74,7 +74,7 @@ h2 {
 
 h3 {
     font-size: 0.95em;
-    font-weight: 500;
+    font-weight: 400;
     font-style: italic;
 }
 
