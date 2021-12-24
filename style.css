@@ -24,47 +24,27 @@ html {
   box-sizing: inherit;
 }
 
-/* Text padding, margin, and alignment */
+/* Fonts | h1: web name, h2: plant name, h3: latin name, h4: info title. */
 
-h1 { /* Website name */
-    margin: var(--gap) 0;
-}
-
-h2, /* Card header: plant name */
-h3, /* Card header: latin name */
-h4, /* Card content: info title */
-.ref ul {
-    padding: 0;
-    margin: 0;
-}
-
-.info-box p {
-    margin: 0 0 var(--gap);
-}
-
-.ref ul {
-    list-style-type: none;
-}
-
-h1,
-h2,
-h3 {
-    text-align: center;
-}
-
-/* Fonts */
-    
 h1, 
 h2, 
 h3, 
 h4, 
 h5,
 h6 {
-    color:var(--title); 
+    color: var(--title); 
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    color: var(--link);
+h1 {
+    margin: var(--gap) 0;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
 }
 
 h2 {
@@ -81,6 +61,10 @@ h3 {
 h4 {
     font-size: 1em;
     font-weight: bold;
+}
+
+a {
+    color: var(--link);
 }
 
 .card-footer {
@@ -158,8 +142,20 @@ h1,
     order: 2;
 }
 
-.archive {
+.archived {
     order: 3;
+}
+
+/* Plain formatting */
+
+.plainlist ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.info-box p {
+    margin: 0 0 var(--gap);
 }
 
 /* Navigation Bar */
