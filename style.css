@@ -95,6 +95,7 @@ h1,
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
+    align-content: flex-end;
 }
 
 .plant-card {
