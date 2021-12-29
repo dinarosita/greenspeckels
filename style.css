@@ -142,6 +142,17 @@ h1,
     gap: var(--gap);
 }
 
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--title);
+}
+
 .card-body {
     flex: 1;
 }
