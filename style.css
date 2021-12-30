@@ -11,9 +11,8 @@
     --gap: 10px;
 }
 
-html {
-    max-width: 1024px;
-    margin: auto;
+body {
+    margin: var(--gap);
     box-sizing: border-box;
     font-family: 'Barlow', sans-serif; 
     font-size: 16px;
@@ -72,23 +71,17 @@ a {
     font-size: 0.9em;
 }
 
-h1 a,
-.card-footer,
-.card-footer a {
+a,
+.card-footer {
     color: var(--title); 
 }
 
-h1 a {
+a {
     text-decoration: none;
 }
 
-.card-footer,
-.card-footer a {
+.card-footer {
     font-style: italic;
-}
-
-.card-footer a {
-    font-weight: bold;
 }
 
 /* Borders and Lines */
@@ -128,6 +121,11 @@ h1,
 .plant-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.plant-container .card-body {
+    max-width: 960px;
 }
 
 .card-header {
