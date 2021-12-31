@@ -186,8 +186,12 @@ figcaption {
     order: 2;
 }
 
-.archived {
+.justplanted {
     order: 3;
+}
+
+.archived {
+    order: 4;
 }
 
 /* Plain formatting */
