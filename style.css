@@ -9,6 +9,7 @@
     --link: sienna;
     --white: white;
     --gap: 10px;
+    --image: 270px;
 }
 
 body {
@@ -95,8 +96,8 @@ h1,
 }
 
 .image {
-    width: 270px;
-    height: 270px;
+    width: var(--image);
+    height: var(--image);
     border-radius: 10px;
     border: 2px solid var(--border);
 }
@@ -140,12 +141,13 @@ h1,
     gap: var(--gap);
 }
 
-figure {
+.card-pictures figure {
+    width: var(--image);
     padding: 0;
     margin: 0;
 }
 
-figcaption {
+.card-pictures figcaption {
     text-align: center;
     font-size: 0.9em;
     color: var(--title);
@@ -174,24 +176,24 @@ figcaption {
 
 /* Order */
 
-.featured {
-    order: 0;
-}
-
-.current {
-    order: 1;
-}
-
-.unstable {
-    order: 2;
+.archived {
+    order: 4;
 }
 
 .justplanted {
     order: 3;
 }
 
-.archived {
-    order: 4;
+.unstable {
+    order: 2;
+}
+
+.current {
+    order: 1;
+}
+
+.featured {
+    order: 0;
 }
 
 /* Plain formatting */
