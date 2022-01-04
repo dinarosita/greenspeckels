@@ -180,12 +180,20 @@ h1,
     margin: var(--gap) auto;
 }
 
+.card-text {
+    
+}
+
 .card-footer {
     margin: var(--gap) 0 auto;
     text-align: center;
 }
 
 /* Order */
+
+.remarks {
+    order: 10;
+}
 
 .archived {
     order: 4;
