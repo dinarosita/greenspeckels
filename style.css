@@ -32,7 +32,7 @@ h3,
 h4, 
 h5,
 h6,
-.card-footer {
+.card-footer  {
     color: var(--title); 
     margin: 0;
     padding: 0;
@@ -98,6 +98,14 @@ a {
 
 .card-footer {
     font-style: italic;
+}
+
+.care li {
+    color: black;
+}
+
+.care li strong {
+    color: var(--title);
 }
 
 /* Borders and Lines */
@@ -229,6 +237,11 @@ ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
+}
+
+.info-box,
+.figureGroup {
+    margin-bottom: 2em;
 }
 
 .info-box p {
