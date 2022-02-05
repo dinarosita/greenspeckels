@@ -209,6 +209,11 @@ h1,
     text-align: left;
 }
 
+.care pre {
+    font-family: 'Barlow', sans-serif; 
+    white-space: pre-wrap;   
+}
+
 .care h3 + p,
 .care > ul > li {
     margin: 0 0 var(--gap);

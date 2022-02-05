@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Care | Green Speckles</title>
+        <title>Care DB | Green Speckles</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css">
@@ -12,45 +12,97 @@
     <body class="carewidth"> 
         
         <!--Page Title-->
-        <a href="./index.html"><h1>Green Speckles: Care</h1></a> 
+        <a href="./index.html"><h1>Green Speckles: Care DB</h1></a> 
         
-        <div class="carebar">
-            <input type="button" name="water" id="water" value="Watering" class="on"></button>
-            <input type="button" name="fertilizer" id="fertilizer" value="Fertilizer" class="on"></button>
-            <input type="button" name="sun" id="sun" value="Sunlight" class="off"></button>
-            <input type="button" name="temperature" id="temperature" value="Temperature" class="off"></button>
-            <input type="button" name="humidity" id="humidity" value="Humidity" class="off"></button>
-            <input type="button" name="pruning" id="pruning" value="Harvest and Pruning" class="off"></button>
-            <input type="button" name="soil" id="soil" value="Soil" class="off"></button>
-            <input type="button" name="misc" id="miscellaneous" value="Miscellaneous" class="off"></button>
+        <div class="care">
+            <h2>Sun</h2>
+            <h3>Full sun</h3>
+            <pre id="sunHighDB"></pre>
+            <h3>Partial shade</h3>
+            <pre id="sunMedDB"></pre>
+        </div>
+        <div class="care">
+            <h2>Water</h2>
+            <h3>High</h3>
+            <pre id="waterHighDB"></pre>
+            <h3>Medium</h3>
+            <pre id="waterMedDB"></pre>
         </div>
 
         <script>
-
-        function toggle () {
-
-            let section = this.id;
-            if (document.querySelector(`#${this.id}`).classList.value === "on") {
-                document.querySelector(`#${this.id}`).classList.value = "off";
-                document.querySelector(`.${this.id}`).style.display = "none";
-            } else if (document.querySelector(`#${this.id}`).classList.value === "off") {
-                document.querySelector(`#${this.id}`).classList.value = "on";
-                document.querySelector(`.${this.id}`).style.display = "block";
-            } else {
-                // not possible
+     
+        let plants = [
+            {
+                name: "Arugula",
+                sun: {
+                    category: "Full sun",
+                    paragraph: "Full sun. But if temperature is high, provide shading to avoid wilting and bolting."
+                },
+                water: {
+                    category: "High",
+                    paragraph: "Regular watering. Water as soon as top inch feels dry. Keep soil consistently moist but not soggy. Fail to do this might cause plant to bolt and flavor ruined."
+                }
+            },
+            {
+                name: "Basil",
+                sun: {
+                    category: "Full sun",
+                    paragraph: "Full sun"
+                }, 
+                water: {
+                    category: "High", 
+                    paragraph: "Keep soil regularly moist, 1 inch of water a week for outdoor, bit more for containers.Water once the top layer of soil dries out, definitely when plant show first sign of wilting (don't let it happen! don't wait for this signal!)."
+                }
+            },
+            {
+                name: "Coleus",
+                sun: {
+                    category: "Partial shade",
+                    paragraph: "Partial shade up to full sun."
+                }, 
+                water: {
+                    category: "Medium", 
+                    paragraph: "Keep soil consistenly moist but not soggy. It should not wet all the time, but too long dry will slow plant growth. For indoor, water maybe every 2-3 days, or more if climate rather dry."
+                }
             }
+        ];
+
+        for (let i = 0; i < plants.length; i++) {
+            if (plants[i]["sun"]["category"] === "Full sun") {
+                let par = document.querySelector("#sunHighDB").textContent;
+                par += (plants[i]["name"] + ": " + plants[i]["sun"]["paragraph"] + "\n" );
+                document.querySelector("#sunHighDB").textContent = par;
+                console.log(par);
+            } else if (plants[i]["sun"]["category"] === "Partial shade") {
+                let par = document.querySelector("#sunMedDB").textContent;
+                par += (plants[i]["name"] + ": " + plants[i]["sun"]["paragraph"] + "\n" );
+                document.querySelector("#sunMedDB").textContent = par;
+                console.log(par);
+            } else if (plants[i]["sun"]["category"] === "Indirect sunlight") {
+                let par = document.querySelector("#sunLowDB").textContent;
+                par += (plants[i]["name"] + ": " + plants[i]["sun"]["paragraph"] + "\n" );
+                document.querySelector("#sunLowDB").textContent = par;
+                console.log(par);
+            }
+
+            if (plants[i]["water"]["category"] === "High") {
+                let par = document.querySelector("#waterHighDB").textContent;
+                par += (plants[i]["name"] + ": " + plants[i]["water"]["paragraph"] + "\n" );
+                document.querySelector("#waterHighDB").textContent = par;
+                console.log(par);
+            } else if (plants[i]["water"]["category"] === "Medium") {
+                let par = document.querySelector("#waterMedDB").textContent;
+                par += (plants[i]["name"] + ": " + plants[i]["water"]["paragraph"] + "\n" );
+                document.querySelector("#waterMedDB").textContent = par;
+                console.log(par);
+            }
+
         }
-
-        document.querySelectorAll("input").forEach((elem) => {
-            elem.addEventListener("click", toggle);
-        });
-
-
-      
-
         </script>
 
-        <!--Care boxes-->
+        
+
+        <!--Care boxes
         <div class="care water" style="display: block">
             <h2>Watering</h2>
 
@@ -623,6 +675,6 @@
         
         <div class="nav-bar"><a href="./index.html" class="nav-button" style="margin<ul><li>auto">Home</a></div>
     
-        -->
+        --> 
     </body>
 </html>
