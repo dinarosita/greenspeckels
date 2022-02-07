@@ -11,6 +11,7 @@
     --white: white;
     --gap: 10px;
     --gap-double: 20px;
+    --gap-triple: 30px;
     --image: 270px;
 }
 
@@ -196,6 +197,11 @@ h1,
     margin: var(--gap);
 }
 
+.care p + h2,
+.care ul + h2 {
+    margin-top: var(--gap-triple);
+}
+
 .care h3 {
     font-size: 1.2em;
     font-weight: bold;
@@ -267,6 +273,10 @@ h1,
     background-color: var(--border);
 }
 
+.care .normal li {
+    color: black;
+    font-weight: normal;
+}
 /* Card margins */
 
 .index-container,

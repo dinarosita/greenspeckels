@@ -15,14 +15,17 @@
         <a href="./index.html"><h1>Green Speckles: Care</h1></a> 
         
         <div class="carebar">
-            <input type="button" name="water" id="water" value="Watering" class="on"></button>
-            <input type="button" name="fertilizer" id="fertilizer" value="Fertilizer" class="on"></button>
+            <input type="button" name="water" id="water" value="Watering" class="off"></button>
+            <input type="button" name="fertilizer" id="fertilizer" value="Fertilizer" class="off"></button>
             <input type="button" name="sun" id="sun" value="Sunlight" class="off"></button>
             <input type="button" name="temperature" id="temperature" value="Temperature" class="off"></button>
             <input type="button" name="humidity" id="humidity" value="Humidity" class="off"></button>
             <input type="button" name="pruning" id="pruning" value="Harvest and Pruning" class="off"></button>
             <input type="button" name="soil" id="soil" value="Soil" class="off"></button>
             <input type="button" name="misc" id="miscellaneous" value="Miscellaneous" class="off"></button>
+            <input type="button" name="notes" id="notes" value="Quick Notes" class="on"></button>
+            <input type="button" name="fertidose" id="fertidose" value="Fertilizer Doses" class="off"></button>
+            <input type="button" name="pest" id="pest" value="Pest" class="off"></button>
         </div>
 
         <script>
@@ -51,7 +54,7 @@
         </script>
 
         <!--Care boxes-->
-        <div class="care water" style="display: block">
+        <div class="care water" style="display: none">
             <h2>Watering</h2>
 
             <h3>High</h3>
@@ -78,7 +81,7 @@
                         <li>consistenly moist but not soggy.It should not wet all the time, but too long dry will slow plant growth. For indoor, water maybe every 2-3 days, or more if climate rather dry.</li>
                     </ul>
                 </li>
-                <li>Thai chili pepper
+                <li>Chili
                     <ul>
                         <li>Keep soil moist at all times, never allow soil to become bone dry as it will cause the blossom to drop. Especially during hot dry days. Containers might even need to be watered as frequent as twice a day if it dries out quickly.</li>
                     </ul>
@@ -139,11 +142,19 @@
             </ul>
         </div>
         
-        <div class="care fertilizer" style="display: block">
+        <div class="care fertilizer" style="display: none">
             <h2>Fertilizer</h2>
 
             <h3>High</h3>
             <ul>
+                <li>Chili
+                    <ul>
+                        <li class="dates">Big chili: Jan mid, Jan 31/Feb 2</li>
+                        <li class="dates">Chili babies: Feb 3</li>
+                        <li>Fertilize immediately after planting using all-purpose granular fertilizer, fertilize again when small peppers begin to form. For containers, use all-purpose balanced liquid fertilizer.</li>
+                        <li>Don't overdo nitrogen, it can deter fruit growth. Should be rich in phosporus, potassium, and calcium.</li>
+                    </ul>
+                </li>
                 <li>Cilantro
                     <ul>
                         <li class="dates">Feb 3</li>
@@ -174,7 +185,7 @@
             <ul>
                 <li>Basil
                     <ul>
-                        <li class="dates">Oneleft Feb 3</li>
+                        <li class="dates">Big basil: Feb 3</li>
                         <li>If planted in organic compost mixture, maybe don't need more nutrient. If plants not growing much, feed once a month with weak liquid fertilizer.</li>
                     </ul>
                 </li>
@@ -222,16 +233,9 @@
 
             <h3>Not yet categorized</h3>
             <ul>
-                <li>Thai chili pepper
+                <li>African violet
                     <ul>
-                        <li class="dates">Feb 2- 3</li>
-                        <li>Fertilize immediately after planting using all-purpose granular fertilizer, fertilize again when small peppers begin to form. For containers, use all-purpose balanced liquid fertilizer.</li>
-                        <li>Don't overdo nitrogen, it can deter fruit growth. Should be rich in phosporus, potassium, and calcium.</li>
-                    </ul>
-                </li>
-                <li>Cilantros
-                    <ul>
-                        <li class="dates">Feb 3 </li>
+                        <li class="dates">Rose formula: Feb 5 </li>
                     </ul>
                 </li>
             </ul>
@@ -257,6 +261,7 @@
                         <li>Like full sun but will tolerate some shade.</li>
                     </ul>
                 </li>
+                <li>Chili</li>
                 <li>Parsley
                     <ul>
                         <li>Full sun.</li>
@@ -272,7 +277,6 @@
                         <li>Grow very well in full sun, but will grow even in partial shade.</li>
                     </ul>
                 </li>
-                <li>Thai chili pepper </li>
                 <li>Thyme
                     <ul>
                         <li>Full sun.</li>
@@ -345,6 +349,7 @@
                 
             <h3>Mild - above 16&#176;C</h3> 
             <ul>
+                <li>Chili</li>
                 <li>Cilantros
                     <ul>
                         <li>16-21&#176;C. Bolted easily especially in warm weather. Once that happens, the flavors change, often become bitter. Only bring outside during spring and early fall, not during summer. Keep it in shaded area. When it gets too hot outside, bring inside to temperature about 21&#176;C.</li>
@@ -355,7 +360,6 @@
                         <li>Soil temperature 16-21&#176;C for best grow. Will stop growing at 27&#176;C.</li>
                     </ul>
                 </li>
-                <li>Thai chili pepper </li>
                 <li>Thyme
                     <ul>
                         <li>16-27&#176;C. To bring outoor, make sure temperature is above 16&#176;C and choose sunny spot.</li>
@@ -563,7 +567,7 @@
 
             <h3>General well-draining soil</h3>
             <ul>
-                <li>Thai chili pepper
+                <li>Chili
                     <ul>
                         <li>All purpose commercial potting soil. pH range 5.5-7.0.</li>
                     </ul>
@@ -617,6 +621,187 @@
                     </ul>
                 </li>
             </ul>
+        </div>
+
+        <div class="care notes" style="display: block">
+            <h2>Quick Notes</h2>
+
+            <h3>Watering and Fertilizing</h3>
+            <p>Winter indoor period: using home indoor dose unless noted.</p>
+
+            <ul>
+                <li>Mid Jan: fertilize big chili using all purpose formula
+                    <ul>
+                        <li>Next one 2 weeks from now.</li>
+                    </ul>
+                </li>
+                <li>27 Jan deep watering (will do that from now on for small pots)
+                    <ul>
+                        <li>To all containers but big chili.</li>
+                    </ul>
+                </li>
+                <li>30 Jan: fertilize big chili</li>
+                <li>3-5 Feb: Fertilizing with deep watering method (will do that from now on)
+                    <ul>
+                        <li>All purpose formula: Chili babies, polka dot plant, potato, cilantro, basil, parsley</li>
+                        <li>Rose formula (1/4 outdoor strength): African violet</li>
+                    </ul>
+                </li>
+                <li>5 Feb deep watering
+                    <ul>
+                        <li>Arugula, lavender, dianthus, kemangi, sage, (candituft?)</li>
+                    </ul>
+                </li>
+                <li>6 Feb deep watering
+                    <ul>
+                        <li>Poinsettia, bunny tails. Both were completely droopy when back from the lake house. Poinsettia stiffen up right away just in a few hours, while bunny tails half way up. The next morning Bunny tails all stand up again.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Soil</h3>
+            <ul>
+                <li>Dec 2021 - Jan 2022
+                    <ul>
+                        <li>Fungus gnat fighting with careful soil replacement.</li>
+                    </ul>
+                </li>
+                <li>Jan 2022
+                    <ul>
+                        <li>Rocks, pebbles, and clay beads are used to layer underneath soil for better drainage and over the soil top to created barrier against funges gnats.</li>
+                    </ul>
+                </li>
+                <li>29 Jan
+                    <ul>
+                        <li>No fungus gnats seen at all the past 2 days.</li>
+                    </ul>
+                </li>
+                <li>2 Feb
+                    <ul>
+                        <li>Fungus gnat observed flying out from the fabric coverage of chili plant when open a little to check water content.</li>
+                    </ul>
+                    <li>3 Feb
+                        <ul>
+                            <li>Using vegetable safe insectisidal soap spray to several 5-10 that flies out the chili soil when the fabric cover is opened.</li>
+                            <li>Chili: soil added to the top layer, also clay beads, then covered in see through fabric.</li>
+                        </ul>
+                    </li>
+                </li>
+            </ul>        
+            
+            <h3>Temporary notes</h3>
+            <p></p>
+        </div>
+
+        <div class="care fertidose" style="display: none">
+            <h2>Fertilizer Doses</h2>
+
+            <h3>Miracle Gro Plant Food, water soluble powder</h3>
+            <ul>
+                <li>Types:
+                    <ul>
+                        <li>All purpose:24-8-16</li>
+                        <li>Tomato, Fruit, and Vegetables: 18-18-21</li>
+                        <li>Roses: 18-24-16</li>
+                        <li>Bloom booster: 15-31-15<br>
+                            Never have this one, but plan to get it.
+                        </li>
+                    </ul>
+                </li>
+                <li>Factory outdoor dose:
+                    <ul>
+                        <li>1 tbs in 4 L water</li>
+                        <li>1 tsp in 1.3 L white watering jug</li>
+                    </ul>
+                </li>
+                <li>Home indoor dose (half of factory outdoor dose):
+                    <ul>
+                        <li>1/2 tbs in 4 L water</li>
+                        <li>1/2 tsp in 1.3 L white watering jug</li>
+                    </ul>
+                </li>                
+            </ul>   
+        </div>
+
+        <div class="care pest" style="display: none">
+            <h2>Pest</h2>
+
+            <h3>Fungus gnats</h3>
+
+            <ul>
+                <li>Autumn 2021
+                    <ul>
+                        <li>We Started seeing the appearance in our indoor plants around the summer 2021. By the time we were leaving for our summer camping trip, July-August, it got pretty bad. Dad treated it when we were away, but it's very hard to make it gone. Late summer to early winter, it's hard to grow seedlings from seeds. Pots after pots, almost none grow. When some do, only very little. Imagine a pot has 2x7 or 2x9 holes,each with several seeds. Usually many seedlings come out from each hole, this time could be just 1 or 2 seedlings from the whole pot. Back then we didn't know what's wrong.</li>
+                    </ul>                    
+                </li>
+                <li>Strategies started on late Nov / early Dec 2021:
+                    <ul>
+                        <li>Changing soil</li>
+                        <li>Improving drainage by bottom layer pebbles</li>
+                        <li>Covering soil top with pebbles or clay beads</li>
+                        <li>Less watering</li>
+                    </ul>                    
+                </li>
+                <li>Nov 2021
+                    <ul>
+                        <li>Attempt to remove fungus gnats population, especally with renewing soil, reducing the water, and adding sand layer to the surface, was always ongoing. However they just reduced in number and even with a small number of them, a flare up can happen fast.</li>
+                    </ul>
+                </li>
+                <li>Dec 2021
+                    <ul>
+                        <li>It's not until mid Dec the attempt feels to be taking a long  term effect. A new strategy here is covering the soil, especially the one with seeds and seedlings, with cling wrap or paper towel. New soil is used. And following that, even washed seedlings that was previously kept around, was discarded because worry larvae might be actually intact in the roots and can repopulate. With exception of basil and potato that's washed really thoroughly before and after kept in water medium overnight.</li>
+                    </ul>
+                </li>
+                <li>Jan 2022
+                    <ul>
+                        <li>Since then, gnats population decreased tremendously. Seeds grown in such condition, each holes thriving with abundance of seedlings. by January, almost no gnat seen.</li>
+                    </ul>
+                </li>
+                <li>Feb 2022
+                    <ul>
+                        <li>A few small outbreaks happen now and then but more or less controlled. Not everyday we see any gnats, and when it does usually just 1 or 2 close to the pot.</li>
+                    </ul>
+                </li>
+                <li>Strategy started Feb 2021:
+                    <ul>
+                        <li>Deep watering</li>
+                        <li>Vegetable safe insecticide spray<br>
+                        We previously owned marigold based insecticide spray and used it late spring, however we haven't been able to locate the bottle, so we got a new one recently. That's why it's very delayed.</li>
+                    </ul>
+                </li>
+                <li>Feb 2022 week 1 - Chili
+                    <ul>
+                        <li>In large chili pot, under the fabric covering, there were about 5-8 gnats emerges from the ground. Aggresively dealt with vegetable safe insecticide spray, just around the soil.</li>
+                    </ul>
+                </li>
+                <li>Feb 2022 problematic containers:
+                    <ul>
+                        <li>Chili 1st generation</li>
+                        <li>Fern (also pale and browning)</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Aphids</h2>
+
+            <ul>
+                <li>Affected plants:
+                    <ul>
+                        <li>Chamomile spring/summer 2021 to the point we have to sacrifice the young plants.</li>
+                        <li>Penta/lantana, one of them I forgot which, summer 2021.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Pest: Spider mites</h2>
+            <ul>
+                <li>Affected plants:
+                    <ul>
+                        <li>The most persistent ones is on Kordana roses and ginger plants, to the point we sacrificed them.</li>
+                    </ul>
+                </li>
+            </ul>
+
         </div>
 
         <!--Navigation Bar
