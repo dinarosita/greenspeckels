@@ -137,6 +137,10 @@ h1,
     flex-direction: column;
 }
 
+.alert {
+    color: rgb(180, 65, 65);
+}
+
 /* Plant page flexbox */
 
 .plant-container {
@@ -239,7 +243,7 @@ h1,
     font-weight: normal;
 }
 
-.care .dates {
+.care .action {
     color:var(--care);
 }
 
