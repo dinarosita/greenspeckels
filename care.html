@@ -25,43 +25,25 @@
             <input type="button" name="soil" id="soil" value="Soil" class="off"></button>
             <input type="button" name="misc" id="miscellaneous" value="Miscellaneous" class="off"></button>
             <input type="button" name="notes" id="notes" value="Quick Notes" class="on"></button>
-            <input type="button" name="fertidose" id="fertidose" value="Fertilizer Doses" class="off"></button>
+            <input type="button" name="fertidose" id="fertidose" value="Techniques & Doses" class="off"></button>
             <input type="button" name="pest" id="pest" value="Pest" class="off"></button>
-            <input type="button" name="poisonous" id="poisonous" value="Poisonous Plants" class="off"></button>
+            <input type="button" name="toxicity" id="toxicity" value="Toxicity" class="off"></button>
             <input type="button" name="references" id="references" value="References" class="off"></button>
         </div>
 
-        <script>
+        <script src="./toggle.js"></script>
 
-        function toggle () {
-
-            let section = this.id;
-            if (document.querySelector(`#${this.id}`).classList.value === "on") {
-                document.querySelector(`#${this.id}`).classList.value = "off";
-                document.querySelector(`.${this.id}`).style.display = "none";
-            } else if (document.querySelector(`#${this.id}`).classList.value === "off") {
-                document.querySelector(`#${this.id}`).classList.value = "on";
-                document.querySelector(`.${this.id}`).style.display = "block";
-            } else {
-                // not possible
-            }
-        }
-
-        document.querySelectorAll("input").forEach((elem) => {
-            elem.addEventListener("click", toggle);
-        });     
-
-        </script>
 
         <!--Care boxes-->
         <div class="care water" style="display: none">
             <h2>Watering</h2>
+            <p>Deep watering since 27 Jan 2022 to all container. On that date, all small containers were watered.</p>
 
             <h3>High: Don't let soil dry out.</h3>
             <ul>
                 <li>African Violet
                     <ul>
-                        <li class="action">5 Feb (f)</li>
+                        <li class="action">5 Feb (fertilized)</li>
                         <li>Keep soil moist with warm water. Don't allow water to have contact with leaves other than light misting. Water from below. Don't let the plants sit in water.</li>
                     </ul>
                 </li>
@@ -74,44 +56,58 @@
                 </li>
                 <li>Basil
                     <ul>
-                        <li class="action">Big basil: 3 Feb (f)</li>
-                        <li class="action">Basi babies: 8 Feb (f) (2185 gr)</li>
+                        <li class="action">Big basil: 3 Feb (fertilized)</li>
+                        <li class="action">Basi babies: 8 Feb (fertilized) (2185 gr)</li>
                         <li>Keep soil regularly moist, 1" of water a week for outdoor, bit more for containers. Water once the top layer of soil dries out, definitely when plant show first sign of wilting (don't let it happen! don't wait for this signal!).</li>
                     </ul>
                 </li>
                 <li>Chili
                     <ul>
-                        <li class="action">Big chili: Feb 2 (f), 8 Feb (2 cans)</li>
-                        <li class="action">Chili babies: 3 Feb (f)</li>
+                        <li class="action">Big chili: Feb 2 (fertilized), 8 Feb (2 cans)</li>
+                        <li class="action">Chili babies: 3 Feb (fertilized), 11 Feb</li>
                         <li>Keep soil moist at all times, never allow soil to become bone dry as it will cause the blossom to drop. Especially during hot dry days. Containers might even need to be watered as frequent as twice a day if it dries out quickly.</li>
                     </ul>
                 </li>
                 <li>Cilantro
                     <ul>
-                        <li class="action">3 Feb (f), 8 Feb</li>
+                        <li class="action">3 Feb (fertilized), 8 Feb, 12 Feb</li>
+                        <li class="action">Watering weight (12 Feb): Slow bolt 1262 to 2047 gr. Quick 1345 to 2084 gr.</li>
                         <li>Keep regularly moist but not soaked. Good drainage is important because cilantro has deep root. 1" per week.</li>
                     </ul>
                 </li>
                 <li>Coleus
                     <ul>
+                        <li class="action">11 Feb</li>
                         <li>Consistenly moist but not soggy. It should not wet all the time, but too long dry will slow plant growth. For indoor, water maybe every 2-3 days, or more if climate rather dry.</li>
+                    </ul>
+                </li>
+                <li>Fern
+                    <ul>
+                        <li class="action">Hasn't been watered since a lot of misting making the soil moist.</li>
+                        <li>Keep moist, don't let completely dry out. Let water run through the drainage, then wait until top soil looking a bit drier before the next watering.</li>
+                    </ul>
+                </li>
+                <li>Kemangi
+                    <ul>
+                        <li class="action">5 Feb</li>
+                        <li>Moderate level of water. Consistently moist soil is best, don't overwater, don't let dry out.</li>
                     </ul>
                 </li>
                 <li>Parsley
                     <ul>
-                        <li class="action">4 Feb (f)</li>
+                        <li class="action">4 Feb (fertilized), 11 Feb</li>
                         <li>Keep evenly moist but not soggy. 1-2" water/week. Never let the soil to dry out, parsley doeesn't tolerate drought well, will quickly wither and brown.</li>
                     </ul>
                 </li>
                 <li>Polka dot plant
                     <ul>
-                        <li class="action">3 Feb (f)</li>
+                        <li class="action">3 Feb (fertilized), 11 Feb</li>
                         <li>Moderate amount of moisture in soil at all time. Water when top hald inch dried out. Don't let soil completely dried out. It can lead foliage to wilt and struggling to survive. Don't get it soggy either, it can cause root rot and kill the plant.</li>
                     </ul>
                 </li>
                 <li>Potato
                     <ul>
-                        <li class="action">3 Feb (f)</li>
+                        <li class="action">3 Feb (fertilized), 11 Feb</li>
                         <li>Rely on steady water supply. Water at least 1 inch a week. Sensitive to drought especially when flowers (which is the peak time to form tubers).</li>
                     </ul>
                 </li>
@@ -127,14 +123,27 @@
             <ul>
                 <li>Alyssum
                     <ul>
-                        <li class="action"></li>
+                        <li class="action">11 Feb</li>
                         <li>At least an inch a week. More if the air is dry. Drain well, susceptible to root rot. Water deeply and allow the potting mix to dry slightly before watering again.</li>
                     </ul>
                 </li>
                 <li>Candytuft
                     <ul>
+                        <li class="action">5 Feb</li>
                         <li>Once established, moderately drought-tolerant. But make sure to water young plants, especially during dry period.</li>
                         <li>For young plants: Water twice a week. Once established: water once a week.</li>
+                    </ul>
+                </li>
+                <li>Ellwood Cypress
+                    <ul>
+                        <li class="action">8 Feb (all purpose &half;)</li>
+                        <li>The youngs like moderate amount of water, but dont like wet feet, susceptible to root rot and often fatal. Water well at least once a week especially in dry weather. Once established watering can be reduced</li>
+                    </ul>
+                </li>
+                <li>Haworthia
+                    <ul>
+                        <li class="action">8 Feb</li>
+                        <li>In spring and summer months, water whenever top inch soil has dried out. In fall and winter: reduce watering to just enough to keep the leaves plump. Don't let water collect in the rosette, this can lead to rot.</li>
                     </ul>
                 </li>
                 <li>Scarlet Flax
@@ -145,7 +154,7 @@
                 </li>
                 <li>String of turtles
                     <ul>
-                        <li class="action">(Top soil still moist by 9 Feb)</li>
+                        <li class="action">11 Feb</li>
                         <li>Prefers slightly moist, however more prone to suffer from overwatering than underwatering. Water thoroughly to get the soil evenly moist, let the soil dry out between watering. Don't water again until top 2 inches of soil have dried out.</li>
                     </ul>
                 </li>
@@ -155,11 +164,19 @@
             <ul>
                 <li>Bunny tails
                     <ul>
+                        <li class="action">6 Feb, 14 Feb</li>
                         <li>Very forgiving, drought resistant. Water deeply and let it dry out before the next watering. Doesn't like wet feet and root might rot if constantly wet.</li>
+                    </ul>
+                </li>
+                <li>Dianthus
+                    <ul>
+                        <li class="action">5 Feb, 11 Feb</li>
+                        <li>Low to average. Water 1 inch weekly. Drought tolerance.</li>
                     </ul>
                 </li>
                 <li>Thyme
                     <ul>
+                        <li class="action">11 Feb</li>
                         <li>Drought resistant, prefer under-watered than over-watered. Wait soil to be completely dry before watering. Flower is not a sign of bolting or over-watering. It will continue to thrive as long as keep trimming to promote new growth.</li>
                     </ul>
                 </li>
@@ -167,16 +184,25 @@
 
             <h3>Not categorized yet</h3>
             <ul>
-                <li>Haworthia
-                    <ul><li class="action">8 Feb</li></ul></li>
+
 
                 <li>Cypress
                     <ul><li class="action">8 Feb (all purpose &half;)</li></ul></li>
                 <li>Soapwort Rock
                     <ul><li class="action">8 Feb (all purpose &half;)</li></ul></li>
                 <li>Sage
-                    <ul><li class="action">8 Feb (all purpose &half;)</li></ul></li>    
-            </ul>
+                    <ul><li class="action">5 Feb, 8 Feb (all purpose &half;)</li></ul></li>    
+
+                <li>Oregano
+                    <ul><li class="action">11 Feb</li></ul></li>
+                <li>Rosemary
+                    <ul><li class="action">11 Feb</li></ul></li>
+                <li>Lavender
+                    <ul><li class="action">5 Feb</li></ul></li>
+
+                <li>Poinsettia
+                    <ul><li class="action">6 Feb</li></ul></li>
+        </ul>
         </div>
         
         <div class="care fertilizer" style="display: none">
@@ -249,6 +275,18 @@
                         <li>Not necessary but can make bloom more abundant. Low nitrogen, high phosporous. Miracle gro bloom formula is 15-30-15, probably best choice, followed by rose at 18-24-16. Slow releasing fertilizer is a good idea when planting. Otherwise, when leaves start forming, then every a half year. Or even just once a year, in early spring.</li>
                     </ul>
                 </li>
+                <li>Haworthia
+                    <ul>
+                        <li>Fertilize using cactus fertilizer according to instruction during spring and summer. Do not fertilize in spring and winter.</li>
+                    </ul>
+                </li>
+                <li>Kemangi
+                    <ul>
+                        <li class="action">Fertilize next watering</li>
+                        <li>In one reference: 2-4 times a year.</li>
+                        <li>In another reference: moderate to high level of nutrients, Feed every 2-3 weeks during warm growing season.</li>
+                    </ul>
+                </li>
                 <li>Parsley
                     <ul>
                         <li class="action">4 Feb (all purpose &half;)</li>
@@ -257,7 +295,7 @@
                 </li>
             </ul>
 
-            <h3>Low: Just the beginning</h3> 
+            <h3>Low</h3> 
             <ul>
                 <li>Arugula
                     <ul>
@@ -267,6 +305,25 @@
                 <li>Coleus
                     <ul>
                         <li>If soil is rich, no need to feed coleus at all. For poor soil, fertilize every month half strength. Color is better when not overly fertilized. Having said that... Container ones might benefit from slow-released fertilizer when starting the pot. Thereafter, feed with diluted liquid fertilizer every 1-2 weeks. Container plants generally need more frequent feeding than garden plants because frequent watering washes the nutrients away.</li>
+                    </ul>
+                </li>
+                <li>Dianthus
+                    <ul>
+                        <li class="action">Fertilize next watering.</li>
+                        <li>Spruce says: Light feeder, a shoveful of compost one a year is enough.</li>
+                        <li>Gardener's path says: For new plant, fertilize every 4-6 weeks with all purpose liquid fertilizer during growing season.</li>
+                    </ul>
+                </li>
+                <li>Ellwood Cypress
+                    <ul>
+                        <li class="action">8 Feb (all purpose &half;)</li>
+                        <li>Doesn't need fertilizer unless the soil is known to be nutrient poor. In such case, use all purpose before new spring growth begin.</li>
+                    </ul>
+                </li>
+                <li>Fern
+                    <ul>
+                        <li class="action">Fertilize next watering</li>
+                        <li>Fertilizer: Balanced 10-10-10, half strength every watering, or use it every 2 weeks.</li>
                     </ul>
                 </li>
                 <li>Thyme
@@ -342,6 +399,22 @@
                     </ul>
                 </li>
                 <li>Chili</li>
+                <li>Dianthus
+                    <ul>
+                        <li>Full sun, 6 hours a day.</li>
+                    </ul>
+                </li>
+                <li>Ellwood Cypress
+                    <ul>
+                        <li class="action">Put in direct sun - need to recover from browning tips.</li>
+                        <li>Plenty of direct sunlight. Without enough sunlight, inner branches often die back. The tree can't produce new buds on old wood, so any brown or bare patches due to lack of light will not grow back.</li>
+                    </ul>
+                </li>
+                <li>Kemangi
+                    <ul>
+                        <li>4-6 hours of full sun a day. Likes full sun, but tolerate partial shade. Will do just fine on a sunny windowsill.</li>
+                    </ul>
+                </li>
                 <li>Parsley
                     <ul>
                         <li>Full sun.</li>
@@ -372,6 +445,11 @@
                         <li>Sow seeds in full sun, but established plants can grow well in partial shade too.</li>
                     </ul>
                 </li>
+                <li>Haworthia
+                    <ul>
+                        <li>Slightly sheltered is better than full sunlight. It likes bright light but not strong direct sunlight. Tolerate morning sun, but not harsh all they long afternoon sunlight. It can burn its foliages. If the color is fading away though, that's the sign of not enough light. East or west facing window is the best.</li>
+                    </ul>
+                </li>
             </ul>
 
             <h3>Medium</h3>
@@ -388,6 +466,7 @@
             <ul>
                 <li>Coleus
                     <ul>
+                        <li class="action">13 Feb - Put in south window because just heavily pruned.</li>
                         <li>Part shade. For indoor containers, indirect sunlight in warm months, expose to filtered unlight during the winter. It does need some light even though just a little. If the plants get leggy and pinching doesn't help, it might need more sun.</li>
                     </ul>
                 </li>
@@ -404,7 +483,6 @@
                 <li>English ivy
                     <ul><li>Bright indirect sunlight</li></ul>
                 </li>
-                <li>Fern</li>
                 <li>Polka dot plant
                     <ul>
                         <li>Sign of too much sun is curling leaves and fading leaf color.</li>
@@ -416,6 +494,11 @@
                         <li>Thrives in bright indirect sunlight. Too long in full sun will damage the leaves. Too little sun will make it fail to produce new growth. Make sure sunlight reaching out all parts of the plant, not just the vining.</li>
                     </ul>
                 </li>
+            </ul>
+
+            <h3>Indirect / dappled sunlight</h3>
+            <ul>
+                <li>Fern</li>
             </ul>
         </div>
 
@@ -447,6 +530,16 @@
                 <li>Coleus
                     <ul>
                         <li>Like it hot. To put outside, wait until it's about 21&degC.</li>
+                    </ul>
+                </li>
+                <li>Haworthia
+                    <ul>
+                        <li>Like 21-35&degC of summer, and okay at around 10&degC in the winter. Will suffer damage under 5&degC</li>
+                    </ul>
+                </li>
+                <li>Kemangi
+                    <ul>
+                        <li>Like warm weather. Even like warm soil.</li>
                     </ul>
                 </li>
                 <li>Polka dot plant
@@ -499,6 +592,28 @@
                     </ul>
                 </li>
             </ul>
+
+            <h3>Wide range</h3>
+            <ul>
+                <li>Dianthus
+                    <ul>
+                        <li>Can stand wide temperature range.</li>
+                        <li>In hot summer, if the temperature consistenly goes above 30&degC, it will go dormant</li>
+                        <li>Tolerate a light frost, don't like a deep freeze. Cover with frost blanket if temperature goes under 5&degC</li>
+                    </ul>                    
+                </li>
+                <li>Ellwood cypress
+                    <ul>
+                        <li>10-27 &degC</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Reference not found</h3>
+            <ul>
+                <li>Fern</li>
+            </ul>
+
         </div>
 
         <div class="care humidity" style="display: none">
@@ -517,8 +632,10 @@
                     </ul>
                 </li>
                 <li>Chili</li>
-                <li>Coleus </li>
-                <li>Fern </li>
+                <li>Coleus</li>
+                <li>Fern
+                    <li>Likes high humidity: Mist everyday, water tray with pebbles. if fern looking dry and brown, might be humidity is too low.</li>
+                </li>
                 <li>Polka dot plant
                     <ul>
                         <li>Prefer minimum 50% humidity</li>
@@ -556,10 +673,13 @@
             <h3>No preference/specific mention</h3>
             <ul>
                 <li>Arugula</li>
+                <li>Alyssum</li>
                 <li>Bunny tails</li>
+                <li>Dianthus</li>
+                <li>Ellwood cypress</li>
+                <li>Haworthia</li>
                 <li>Parsley</li>
                 <li>Potato</li>
-                <li>Alyssum</li>
             </ul>
         </div>
 
@@ -570,12 +690,13 @@
             <ul>
                 <li>Coleus
                     <ul>
+                        <li class="action">Thinning seedlings: 7 Feb, 12 Feb.</li>
                         <li>Pinch out the growing tips when plants are about 6" tall. If leaves preferred, pinch of flowers under the flower buds, so energy doesn't get drained by flowering and seeding process. Unpruned plants tends to get leggy and might need more sun.</li>
                     </ul>
                 </li>
                 <li>Polka dot plant
                     <ul>
-                        <li>4 Feb</li>
+                        <li class="action">4 Feb, x Feb, 12 Feb to 6 cm. Hope will not die out.</li>
                         <li>Cut or pinch back top 2 leaves on each stem weekly, to avoid long, lanky, leggy branches.</li>
                         <li>To extend growing season of the plant, clip flowers as soon as appearing, Because the plant will die off/enter dormancy once it finishes flowering.</li>
                     </ul>
@@ -589,30 +710,6 @@
                 </li>
             </ul>
 
-            <h3>Flowering plants</h3>
-            <ul>
-                <li>Alyssum
-                    <ul>
-                        <li>Deadhead to keep plants flowering. If it's a large area, can shear by 1/3 instead. Plants tend to be leggy and gangly, prune to keep neat.</li>
-                    </ul>
-                </li>
-                <li>Bunny Tails
-                    <ul>
-                        <li>Flowers can be dried and last long as bouquets or craft. hang a bunch upside down, dry in a dark, cool, and dry place for 2-3 weeks or until stem snaps when bent. It will last for years</li>
-                    </ul>
-                </li>
-                <li>Candytuft
-                    <ul>
-                        <li>After blooming period has ended, prune 1/3 of the top foliage to keep it nice and tidy. Candytuft is typically 1 foot height, but can be pruned to maintain smaller size.</li>
-                    </ul>
-                </li>
-                <li>Scarlet Flax
-                    <ul>
-                        <li>prune and cut back flowering stems in early summer to extend bloom period.</li>
-                    </ul>
-                </li>
-            </ul>
-                
             <h3>Herbs for harvest</h3> 
             <ul>
                 <li>Arugula
@@ -647,14 +744,65 @@
                         <li>To extend harvest, regularly snip soft stems.</li>
                     </ul>
                 </li>
+                <li>Kemangi
+                    <ul>
+                        <li class="action">12 Feb (First pinching, only some)</li>
+                        <li>Harvest anytime, harvest frequently. Leave at least a half of the plant. Prune the entire branch except leave few buds.
+                        </li>
+                        <li>Pinch regularly because the plants tend to get leggy and promote growth.</li>
+                        <li>Start when seedling have 3 sets of true leaves: pinch off the top set. Continue this pattern when harvesting, pruning each branch that's harvested to above just its first or second set of leaves.</li>
+                        <li>Pinch off flowers for best flavor and extend harvest time. Flowering change the flavor and reduce leaf production. But the flowers aroma does repel many insect pests.</li>
+                    </ul>
+                </li>
                 <li>Parsley
                     <ul>
-                        <li>Begin to harvest when it is about 6" tall and relatively bushy. Harvest whole stem from the base to encourage more growth. Take outer leaves, let inner leaves intact to continue to maturity.Do not remove more than 1/3 plants at a time.</li>
+                        <li>Begin to harvest when it is about 6" tall and relatively bushy. Harvest whole stem from the base to encourage more growth. Take outer leaves, let inner leaves intact to continue to maturity. Do not remove more than 1/3 plants at a time.</li>
                     </ul>
                 </li>
                 <li>Thyme
                     <ul>
+                        <li class="action">Pinched: 12, 13 Feb</li>
                         <li>Harvest anytime once established. No extra pruning needed when harvested regularly. But it can be cut back if it gets too long/lanky, or to shape. After 3-4 years, potted thyme can be woody. <a href="https://www.gardeningknowhow.com/edible/herbs/thyme/pruning-thyme-plants.htm" target="_blank">Read</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Flower plants</h3>
+            <ul>
+                <li>Alyssum
+                    <ul>
+                        <li>Deadhead to keep plants flowering. If it's a large area, can shear by 1/3 instead. Plants tend to be leggy and gangly, prune to keep neat.</li>
+                    </ul>
+                </li>
+                <li>Bunny Tails
+                    <ul>
+                        <li>Flowers can be dried and last long as bouquets or craft. hang a bunch upside down, dry in a dark, cool, and dry place for 2-3 weeks or until stem snaps when bent. It will last for years</li>
+                    </ul>
+                </li>
+                <li>Candytuft
+                    <ul>
+                        <li>After blooming period has ended, prune 1/3 of the top foliage to keep it nice and tidy. Candytuft is typically 1 foot height, but can be pruned to maintain smaller size.</li>
+                    </ul>
+                </li>
+                <li>Dianthus
+                    <ul>
+                        <li>Removed diseased or damaged branches regularly.</li>
+                        <li>Deadhead to prolong flowering, shear to shape after flowering period is finished.</li>
+                    </ul>
+                </li>
+                <li>Scarlet Flax
+                    <ul>
+                        <li>prune and cut back flowering stems in early summer to extend bloom period.</li>
+                    </ul>
+                </li>
+            </ul>               
+
+            <h3>Fruit plants</h3>
+            <ul>
+                <li>Chili
+                    <ul>
+                        <li class="action">Start pinching top 2 sets of 5: 13 Feb</li>
+                        <li>References mention Thai chili pepper doesn't need to be pinched when they are young. Also it's only about 30 cm tall. So I'm not sure why our plants are about a meter tall or maybe it's not even the same kind. So for the seedling, we are going to follow generic pepper pinching routine. Wait until there are 10 leaves (5 sets), pinch the top 2 sets.</li>
                     </ul>
                 </li>
             </ul>
@@ -674,6 +822,15 @@
                 <li>Bunny tails
                     <ul>
                         <li>Plants sprout easily from seed and baby grasses can be thinned to let stronger plants have room to grow</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Trees</h3>
+            <ul>
+                <li>Ellwood cypress
+                    <ul>
+                        <li>Low maintenance, no pruning required unless bonsai trees. For shaping, best to do it on fall. Remove dead limbs, trim back to shape, but don't cut into old wood. Limbs cut back too far will not generate new growth and will create a bare spot. Gentle pruning to remove unattractive brown dead foliage can be done with blasting water from a hose. Enough to remove dead foliage, without worry cuting to deep. For bonsai plant, pinching with hand regularly to shape is a good idea.</li>
                     </ul>
                 </li>
             </ul>
@@ -743,32 +900,50 @@
                         <li>All purpose commercial potting soil. pH range 5.5-7.0.</li>
                     </ul>
                 </li>
+                <li>Dianthus
+                    <ul>
+                        <li>Neutral to alkaline, well-drained soil.</li>
+                    </ul>
+                </li>
+                <li>Ellwood cypress
+                    <ul>
+                        <li>Average, moist, well-drained soil or potting mix.</li>
+                    </ul>
+                </li>
+                <li>Kemangi
+                    <ul>
+                        <li>Not particular to soil type or pH, but like it well-draining.</li>
+                    </ul>
+                </li>
             </ul>
 
-            <h3>Sandy</h3>
+            <h3>Sandy / gravelly</h3>
             <ul>
                 <li>Bunny tails
                     <ul>
                         <li>Like sandy soil most, but any well-draining soil is fine.</li>
                     </ul>
                 </li>
+                <ul>
+                    <li>Candytuft
+                        <ul>
+                            <li>gravelly soil like in their native habitat. Critical to allow excellent drainage. pH more of the alkaline side.</li>
+                        </ul>
+                    </li>
+                </ul>
                 <li>Cilantro
                     <ul>
                         <li>Ordinaly potting mix is good. Likes airy, light, fast-draining soil with plenty of perlite or sharp sand mixed to inscrease drainage. Use rather potting mix that garden soil which is too heavy. Do not repot. It might bolt at slightest provocations.</li> 
                     </ul>
                 </li>
+                <li>Haworthia
+                    <ul>
+                        <li>Likes sandy and gravelly soil with excellent drainage.  </li>
+                    </ul>
+                </li>
                 <li>Thyme
                     <ul>
                         <li>Very dry and well-draining. Sandy mixture is the best. If potting mix is used, mix it with sand or gravel. Thyme is particularly susceptible to root rot and over-watering. Wide range of pH: 6-8.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h3>Gravelly</h3> 
-            <ul>
-                <li>Candytuft
-                    <ul>
-                        <li>gravelly soil like in their native habitat. Critical to allow excellent drainage. pH more of the alkaline side.</li>
                     </ul>
                 </li>
             </ul>
@@ -786,15 +961,6 @@
                     </ul>
                 </li>
             </ul>
-            
-            <h2>Toxicity</h2>
-            <ul>
-                <li>Potato
-                    <ul>
-                        <li>Toxic leaves</li>
-                    </ul>
-                </li>
-            </ul>
 
             <h2>Hilling</h2>
             <ul>
@@ -809,24 +975,6 @@
         <div class="care notes" style="display: block">
             <h2>Quick Notes</h2>
 
-            <h3>Watering and Fertilizing</h3>
-            <ul>
-                <li>27 Jan deep watering (will do that from now on for small pots)
-                    <ul>
-                        <li>To all containers but big chili.</li>
-                    </ul>
-                </li>
-                <li>5 Feb deep watering
-                    <ul>
-                        <li>Arugula, lavender, dianthus, kemangi, sage, (candituft?)</li>
-                    </ul>
-                </li>
-                <li>6 Feb deep watering
-                    <ul>
-                        <li>Poinsettia, bunny tails. Both were completely droopy when back from the lake house. Poinsettia stiffen up right away just in a few hours, while bunny tails half way up. The next morning Bunny tails all stand up again.</li>
-                    </ul>
-                </li>
-            </ul>
 
             <h3>Soil</h3>
             <ul>
@@ -884,11 +1032,38 @@
                         <li>It also has fungus gnats.</li>
                     </ul>
                 </li>
+                <li>Ellwood Cypress
+                    <ul>
+                        <li class="action">Put in direct sun - need to recover from browning tips.</li>
+                        <li>Plenty of direct sunlight. Without enough sunlight, inner branches often die back. The tree can't produce new buds on old wood, so any brown or bare patches due to lack of light will not grow back.</li>
+                    </ul>
+                </li>
+                <li>Polka dot Plant
+                    <ul>
+                        <li>13 Feb: It's becoming too leggy and pruned heavily this past 1 week. Make sure it has enough sunlight but not over (to prevent color fading) to promote growth and inhibit legginess.</li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
         <div class="care fertidose" style="display: none">
-            <h2>Fertilizer Doses</h2>
+            <h2>Techniques and Doses</h2>
+
+            <div class="card-pictures">
+                <figure>
+                    <img class="image" src="./img/cilantro_watering_20220212_270.jpg" alt="Cilantro (quick flower)">
+                    <figcaption>Deep watering cilantro - 12 Feb 2022</figcaption>
+                </figure>
+            </div>
+
+            <h3>Watering technique</h3>
+            <ul>
+                <li>27 Jan deep watering (will do that from now on for small pots)
+                    <ul>
+                        <li>To all containers but big chili.</li>
+                    </ul>
+                </li>
+            </ul>
 
             <h3>Miracle Gro Plant Food, water soluble powder</h3>
             <ul>
@@ -1000,11 +1175,21 @@
 
         </div>
 
-        <div class="care poisonous" style="display: none">
-        <h3>Poisonous plants</h3>
+        <div class="care toxicity" style="display: none">
+        <h3>Toxicity</h3>
         <ul>
+            <li>Dianthus
+                <ul>
+                    <li>Toxic to pets</li>
+                </ul>
+            </li>
             <li>English ivy
                 <ul><li>English ivy leaves are poisonous if eaten and can cause skin irritation. It's a good idea to wear gloves while handling this plant, and to keep it away from children, cats and dogs.</li></ul>
+            </li>
+            <li>Potato
+                <ul>
+                    <li>Toxic leaves</li>
+                </ul>
             </li>
         </ul>
         </div>
