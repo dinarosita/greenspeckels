@@ -113,8 +113,6 @@ h1,
     padding: var(--gap);
 }
 
-
-
 .image {
     width: var(--image);
     height: var(--image);
@@ -141,6 +139,9 @@ h1,
     color: rgb(180, 65, 65);
 }
 
+.terminated {
+    color: gray;
+}
 /* Plant page flexbox */
 
 .plant-container {
