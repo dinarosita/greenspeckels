@@ -3,6 +3,7 @@
 :root {
     --border:darkseagreen;
     --title: rgb(121, 148, 121);
+    --subtitle: darksalmon;
     --code: olive;
     --care: rgb(209, 130, 130);
     --shadow: whitesmoke;
@@ -31,6 +32,7 @@ body {
 .waterlog-main h2 {
     text-align: left;
     margin-top: 1rem;
+    color: var(--subtitle);
 }
 .waterlog-main dt {
     font-weight: bold;
@@ -38,7 +40,7 @@ body {
 }
 
 .waterlog-main dd + dt {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .waterlog-main dl > dd > ul {
@@ -64,6 +66,9 @@ body {
     border-radius: 0.3rem;
 }
 
+.waterlog-main dd {
+    margin-left: 2rem;
+}
 /* hr {
     border: none;
     border-top: 3px double #333;
@@ -189,6 +194,18 @@ a {
 
 .card-footer {
     font-style: italic;
+}
+
+b {
+    color: var(--subtitle);
+}
+
+strong {
+    color: peru;
+}
+
+.center {
+    text-align: center;
 }
 
 /* Borders and Lines */
@@ -452,6 +469,7 @@ ul {
     flex-wrap: wrap;
     gap: 0.5em;
     margin: 5px 0;
+    justify-content: center;
 }
 
 .nav-button:link,
