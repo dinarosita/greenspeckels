@@ -26,6 +26,94 @@ body {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+/* || waterlog-main */
+
+.waterlog-main h2 {
+    text-align: left;
+    margin-top: 1rem;
+}
+.waterlog-main dt {
+    font-weight: bold;
+    color: var(--title);
+}
+
+.waterlog-main dd + dt {
+    margin-top: 0.5rem;
+}
+
+.waterlog-main dl > dd > ul {
+    padding-left: 0;
+}
+
+.waterlog-main hr {
+    border: none;
+    border-top: 4px dotted var(--title);
+    overflow: visible;
+    text-align: center;
+    height: 0.3rem;
+}
+
+.waterlog-main hr:after {
+    content: "TOP";
+    padding: 0.1rem 0.5rem;
+    background-color: white;
+    position: relative;
+    top: -0.75rem;
+    font-weight: bold;
+    border: 2px solid var(--title);
+    border-radius: 0.3rem;
+}
+
+/* hr {
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr:after {
+    background: #fff;
+    content: '§';
+    padding: 0 1rem;
+    position: relative;
+    top: -13px;
+} */
+
+
+
+
+/* || html-nav */
+
+.html-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.html-nav ul li {
+    color: var(--title);
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0 5px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    white-space:nowrap;
+}
+
+.html-nav ul li:hover {
+    background-color: var(--borderfill);
+}
+
+.html-nav ul li a {
+    color: inherit;
+    font-style: normal;
+}
 
 /* Fonts | h1: web name, h2: plant name, h3: latin name, h4: batch, h6: info title. */
 
@@ -139,9 +227,12 @@ h1,
     color: rgb(180, 65, 65);
 }
 
-.terminated {
-    color: gray;
+.terminated,
+.terminated h6 {
+    color:  silver;
 }
+
+
 /* Plant page flexbox */
 
 .plant-container {
