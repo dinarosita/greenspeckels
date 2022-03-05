@@ -3,7 +3,7 @@
 :root {
     --border:darkseagreen;
     --title: rgb(121, 148, 121);
-    --subtitle: darksalmon;
+    --subtitle: rgb(209, 130, 130);
     --code: olive;
     --care: rgb(209, 130, 130);
     --shadow: whitesmoke;
@@ -78,6 +78,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 2rem;
     list-style-type: none;
     padding-left: 0;
 }
