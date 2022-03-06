@@ -29,6 +29,9 @@ body {
 }
 /* || waterlog-main */
 
+.waterlog .archived {
+    color: gray;
+}
 .waterlog-main h2 {
     text-align: left;
     margin-top: 1rem;
