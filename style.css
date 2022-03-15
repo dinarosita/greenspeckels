@@ -404,15 +404,19 @@ h1,
     order: 10;
 }
 
+.failed {
+    order: 5;
+}
+
 .archived {
     order: 4;
 }
 
-.justplanted {
+.sow {
     order: 3;
 }
 
-.unstable {
+.sprouts {
     order: 2;
 }
 
