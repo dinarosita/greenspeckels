@@ -405,19 +405,19 @@ h1,
 }
 
 .failed {
-    order: 5;
+    order: 6;
 }
 
 .archived {
-    order: 4;
+    order: 5;
 }
 
 .sow {
-    order: 3;
+    order: 4;
 }
 
-.sprouts {
-    order: 2;
+.seedling {
+    order: 3;
 }
 
 .current {
