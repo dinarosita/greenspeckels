@@ -40,6 +40,7 @@ body {
 .waterlog-main dt {
     font-weight: bold;
     color: var(--title);
+    margin-top: 0.5rem;
 }
 
 .waterlog-main dd + dt {
@@ -409,6 +410,10 @@ h1,
 
 .remarks {
     order: 10;
+}
+
+.placeholder {
+    order: 7;
 }
 
 .failed {
